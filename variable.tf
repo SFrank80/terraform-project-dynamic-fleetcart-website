@@ -50,7 +50,7 @@ variable "ssh_location" {
 
 # rds variables
 variable "database_snapshot_identifier" {
-  default       = "arn:aws:rds:us-east-1:001129808237:snapshot:database-1-snapshot"
+  default       = "arn:aws:rds:us-east-1:001129808237:snapshot:fleetcart-final-snapshot"
   description   = "the database snapshot arn"
   type          = string
 }
@@ -62,8 +62,8 @@ variable "database_instance_class" {
 }
 
 variable "database_instance_identifier" {
-  default       = "database-1"
-  description   = "the database instance type identifier"
+  default       = "dev-rds-db"
+  description   = "the database instance identifier"
   type          = string
 }
 
@@ -95,7 +95,7 @@ variable "launch_template_name" {
 }
 
 variable "ec2_image_id" {
-  default       = "ami-027834f09d4f800ef"
+  default       = "ami-0c2dd81ffc57d589e"
   description   = "id of the ami"
   type          = string
 }
