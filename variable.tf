@@ -114,7 +114,7 @@ variable "ec2_key_pair_name" {
 
 # route 53 variables
 variable "domain_name" {
-  default       = "awswpp2023.com"
+  default       = "https://www.awswpp2023.com"
   description   = "domain name"
   type          = string
 }
