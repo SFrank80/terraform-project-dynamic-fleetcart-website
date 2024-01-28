@@ -21,7 +21,7 @@ resource "aws_autoscaling_group" "auto_scaling_group" {
   desired_capacity    = 2
   max_size            = 4
   min_size            = 1
-  name                = "dev-asg"
+  name                = "DEV-asg1"
   health_check_type   = "ELB"
 
   launch_template {
