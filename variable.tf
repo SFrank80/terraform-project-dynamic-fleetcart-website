@@ -48,35 +48,23 @@ variable "ssh_location" {
   type          = string
 }
 
-# rds variables
-variable "database_snapshot_identifier" {
-  default       = "arn:aws:rds:us-east-1:001129808237:snapshot:fleetcart-final-snapshot"
-  description   = "the database snapshot arn"
-  type          = string
-}
-
-variable "database_instance_class" {
-  default       = "db.t2.micro"
-  description   = "the database instance type"
-  type          = string
-}
-
-variable "database_instance_identifier" {
-  default       = "dev-rds-db"
-  description   = "the database instance identifier"
-  type          = string
-}
-
-variable "multi_az_deployment" {
-  default       = false
-  description   = "create a stanby db instance"
-  type          = bool
-}
-
 # application load balancer variables
 variable "ssl_certificate_arn" {
   default       = "arn:aws:acm:us-east-1:001129808237:certificate/614c6576-d1c7-4509-a777-ccc07a43dea8"
   description   = "ssl certificate arn"
+  type          = string
+}
+
+# route 53 variables
+variable "domain_name" {
+  default       = "awswpp2023.com"
+  description   = "domain name"
+  type          = string
+}
+
+variable "record_name" {
+  default       = "www"
+  description   = "sub domain name"
   type          = string
 }
 
@@ -109,18 +97,5 @@ variable "ec2_instance_type" {
 variable "ec2_key_pair_name" {
   default       = "Tutorial EC2 Key"
   description   = "name of the ec2 key pair"
-  type          = string
-}
-
-# route 53 variables
-variable "domain_name" {
-  default       = "https://www.awswpp2023.com"
-  description   = "domain name"
-  type          = string
-}
-
-variable "record_name" {
-  default       = "www"
-  description   = "sub domain name"
   type          = string
 }
